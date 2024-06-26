@@ -17,7 +17,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Your App',
-      initialRoute: '/splash',
+      initialRoute: '/home',
       theme: ThemeData(
         primaryColor: Color(0xff02367B),
           colorScheme: ColorScheme.fromSwatch(

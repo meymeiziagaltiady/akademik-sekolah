@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,26 +13,52 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle(
-          statusBarColor: Theme.of(context).primaryColor,
-          statusBarIconBrightness: Brightness.light,
-        ),
-        child: SafeArea(
-          child: Column(
-            children: [
-              header(context),
-            ],
-          ),
+        body: SingleChildScrollView(
+      child: SafeArea(
+        child: Column(
+          children: [
+            header(context),
+            Container(
+                padding: EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        btnFeature('icons/Clock.svg', 'Kehadiran', 'kehadiran'),
+                        SizedBox(width: 20),
+                        btnFeature('icons/toa.svg', 'Pengumuman', 'pengumuman'),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        btnFeature('icons/Matemathic.svg', 'Ujian', 'ujian'),
+                        SizedBox(width: 20),
+                        btnFeature('icons/Schedule.svg', 'Kegiatan', 'kegiatan'),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        btnFeature('icons/Webinar.svg', 'Laporan Belajar Siswa',
+                            'laporan_belajar_siswa'),
+                        SizedBox(width: 20),
+                        btnFeature('icons/toa.svg', 'Laporan Kinerja Guru',
+                            'laporan_kinerja_guru'),
+                      ],
+                    ),
+                  ],
+                ))
+          ],
         ),
       ),
-    );
+    ));
   }
 
   Widget header(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20.0),
-      height: MediaQuery.of(context).size.height / 4,
+      height: MediaQuery.of(context).size.height / 5,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
       ),
@@ -87,5 +114,37 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget btnFeature(String icon, String nameFeature, String route) {
+    return Expanded(
+        flex: 1,
+        child: SizedBox(
+          height: 150,
+          child: ElevatedButton(
+            onPressed: () => Get.toNamed('/otp'),
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset(icon),
+                  SizedBox(height: 10),
+                  Text(
+                    nameFeature,
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(9)),
+              ),
+            ),
+          ),
+        ));
   }
 }
