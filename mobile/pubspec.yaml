@@ -12,6 +12,7 @@ dependencies:
   get:
   google_fonts:
   flutter_svg:
+  intl:
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +29,4 @@ flutter:
   - icons/Schedule.svg
   - icons/toa.svg
   - icons/Webinar.svg
+  - icons/E-Learning.svg

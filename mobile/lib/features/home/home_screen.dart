@@ -13,46 +13,61 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: SafeArea(
-        child: Column(
-          children: [
-            header(context),
-            Container(
-                padding: EdgeInsets.all(20.0),
+        body: AnnotatedRegion<SystemUiOverlayStyle>(
+            value: SystemUiOverlayStyle(
+              statusBarColor:
+                  Theme.of(context).primaryColor,
+              statusBarIconBrightness:
+                  Brightness.light,
+            ),
+            child: SingleChildScrollView(
+              child: SafeArea(
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        btnFeature('icons/Clock.svg', 'Kehadiran', 'kehadiran'),
-                        SizedBox(width: 20),
-                        btnFeature('icons/toa.svg', 'Pengumuman', 'pengumuman'),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        btnFeature('icons/Matemathic.svg', 'Ujian', 'ujian'),
-                        SizedBox(width: 20),
-                        btnFeature('icons/Schedule.svg', 'Kegiatan', 'kegiatan'),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        btnFeature('icons/Webinar.svg', 'Laporan Belajar Siswa',
-                            'laporan_belajar_siswa'),
-                        SizedBox(width: 20),
-                        btnFeature('icons/toa.svg', 'Laporan Kinerja Guru',
-                            'laporan_kinerja_guru'),
-                      ],
-                    ),
+                    header(context),
+                    Container(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                btnFeature('icons/Clock.svg', 'Kehadiran',
+                                    'kehadiran'),
+                                SizedBox(width: 20),
+                                btnFeature('icons/toa.svg', 'Pengumuman',
+                                    'pengumuman'),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              children: [
+                                btnFeature(
+                                    'icons/Matemathic.svg', 'Ujian', 'ujian'),
+                                SizedBox(width: 20),
+                                btnFeature('icons/Schedule.svg', 'Kegiatan',
+                                    'kegiatan'),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              children: [
+                                btnFeature(
+                                    'icons/Webinar.svg',
+                                    'Laporan Belajar Siswa',
+                                    'laporan_belajar_siswa'),
+                                SizedBox(width: 20),
+                                btnFeature(
+                                    'icons/E-Learning.svg',
+                                    'Laporan Kinerja Guru',
+                                    'laporan_kinerja_guru'),
+                              ],
+                            ),
+                          ],
+                        ))
                   ],
-                ))
-          ],
-        ),
-      ),
-    ));
+                ),
+              ),
+            )));
   }
 
   Widget header(BuildContext context) {
@@ -122,7 +137,7 @@ class HomeScreen extends StatelessWidget {
         child: SizedBox(
           height: 150,
           child: ElevatedButton(
-            onPressed: () => Get.toNamed('/otp'),
+            onPressed: () => Get.toNamed('/$route'),
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 15),
               child: Column(
@@ -139,7 +154,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
+              backgroundColor: Color(0xff3B82F6),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(9)),
               ),
