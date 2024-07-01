@@ -49,8 +49,14 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8),
-              TextField(
-                onChanged: controller.setEmail,
+              Obx(()=>TextField(
+                controller:controller.emailController,
+                onChanged: (value) {
+                    // Reset email validation on input change
+                    if (!controller.isEmailValid.value) {
+                      controller.isEmailValid.value = true;
+                    }
+                  },
                 decoration: InputDecoration(
                   hintText: 'Masukkan email',
                   hintStyle: TextStyle(
@@ -58,6 +64,9 @@ class LoginPage extends StatelessWidget {
                     fontSize: 16, 
                     fontWeight: FontWeight.w100, 
                   ),
+                  errorText: controller.isEmailValid.value
+                        ? null
+                        : 'Enter a valid email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(
@@ -80,7 +89,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
+              )),
               SizedBox(height: 16),
               Center(
                 child: ElevatedButton(
