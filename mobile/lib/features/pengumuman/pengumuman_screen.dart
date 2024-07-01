@@ -3,9 +3,10 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class PengumumanScreen extends StatelessWidget {
-  final String thumbnail= 'images/lepi.jpg';
+  final String thumbnail = 'images/lepi.jpg';
   final String title = 'Ad voluptate velit laborum do officia nostrud.';
-  final String content = 'Minim aliqua consectetur aliqua adipisicing aliqua adipisicing cillum. Labore aute nostrud elit sunt aute minim. Esse mollit ipsum nulla nulla deserunt velit ipsum esse elit est tempor id aliqua eu.\nSit commodo culpa deserunt duis. Pariatur mollit quis tempor et dolor veniam elit cillum. Quis ex sint ut pariatur sint officia aliquip laboris.\nId reprehenderit magna nulla officia dolore anim dolor ex aliqua esse. Irure nulla qui culpa sunt non irure deserunt anim cillum amet aliqua. Sint commodo exercitation excepteur ex enim laboris esse tempor sint excepteur. Magna incididunt dolor duis minim ullamco.';
+  final String content =
+      'Minim aliqua consectetur aliqua adipisicing aliqua adipisicing cillum. Labore aute nostrud elit sunt aute minim. Esse mollit ipsum nulla nulla deserunt velit ipsum esse elit est tempor id aliqua eu.\nSit commodo culpa deserunt duis. Pariatur mollit quis tempor et dolor veniam elit cillum. Quis ex sint ut pariatur sint officia aliquip laboris.\nId reprehenderit magna nulla officia dolore anim dolor ex aliqua esse. Irure nulla qui culpa sunt non irure deserunt anim cillum amet aliqua. Sint commodo exercitation excepteur ex enim laboris esse tempor sint excepteur. Magna incididunt dolor duis minim ullamco.';
   final DateTime reminderDate = DateTime.now();
 
   @override
@@ -20,16 +21,15 @@ class PengumumanScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildPengumumanCard(
-                title,
-                content,
-                thumbnail,
-                reminderDate),
-            _buildPengumumanCard(
-                title,
-                content,
-                thumbnail,
-                reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
+            _buildPengumumanCard(title, content, thumbnail, reminderDate),
           ],
         ),
       ),
@@ -46,7 +46,12 @@ class PengumumanScreen extends StatelessWidget {
         shadowColor: Color.fromARGB(100, 0, 0, 0),
         margin: EdgeInsets.only(bottom: 20),
         child: GestureDetector(
-          onTap: () => Get.toNamed('/detail_pengumuman', arguments: {'thumbnail':thumbnail,'title':title,'content':content,'reminderDate':reminderDate}),
+          onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
+            'thumbnail': thumbnail,
+            'title': title,
+            'content': content,
+            'reminderDate': reminderDate
+          }),
           child: SizedBox(
               height: 135,
               child: Padding(

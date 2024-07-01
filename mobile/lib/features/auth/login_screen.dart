@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
                   fontSize: 32,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             Obx(() => TextField(
                   controller: controller.emailController,
                   decoration: InputDecoration(

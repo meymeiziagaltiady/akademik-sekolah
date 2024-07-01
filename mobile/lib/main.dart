@@ -1,6 +1,8 @@
 import 'package:akademik_1/features/home/home_screen.dart';
 import 'package:akademik_1/features/auth/login_screen.dart';
 import 'package:akademik_1/features/auth/otp_screen.dart';
+import 'package:akademik_1/features/kegiatan/kegiatan_screen.dart';
+import 'package:akademik_1/features/kehadiran/kehadiran_screen.dart';
 import 'package:akademik_1/features/pengumuman/detail_pengumuman.dart';
 import 'package:akademik_1/features/pengumuman/pengumuman_screen.dart';
 import 'package:akademik_1/features/profile/detail_avatar.dart';
@@ -19,7 +21,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Your App',
-      initialRoute: '/splash',
+      initialRoute: '/home',
       theme: ThemeData(
           primaryColor: Color(0xff02367B),
           colorScheme: ColorScheme.fromSwatch(
@@ -41,6 +43,8 @@ class Main extends StatelessWidget {
         GetPage(name: '/detail_avatar', page: () => DetailAvatarScreen()),
         GetPage(name: '/pengumuman', page: () => PengumumanScreen()),
         GetPage(name: '/detail_pengumuman', page: () => DetailPengumumanScreen()),
+        GetPage(name: '/kehadiran', page: () => KehadiranScreen()),
+        GetPage(name: '/kegiatan', page: () => KegiatanScreen()),
       ],
     );
   }

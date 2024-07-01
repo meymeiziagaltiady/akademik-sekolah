@@ -10,15 +10,68 @@ class HomeScreen extends StatelessWidget {
   String sekolah = "SMA Hybe";
   String userRole = "Siswa";
 
+  final List<String> content = const [
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
+    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf '
+  ];
+  final int maxLength = 650;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle(
-              statusBarColor:
-                  Theme.of(context).primaryColor,
-              statusBarIconBrightness:
-                  Brightness.light,
+              statusBarColor: Theme.of(context).primaryColor,
+              statusBarIconBrightness: Brightness.light,
             ),
             child: SingleChildScrollView(
               child: SafeArea(
@@ -26,36 +79,32 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     header(context),
                     Container(
-                        padding: EdgeInsets.all(20.0),
+                        padding: EdgeInsets.symmetric(vertical: 30.0),
                         child: Column(
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 btnFeature('icons/Clock.svg', 'Kehadiran',
                                     'kehadiran'),
-                                SizedBox(width: 20),
                                 btnFeature('icons/toa.svg', 'Pengumuman',
                                     'pengumuman'),
-                              ],
-                            ),
-                            SizedBox(height: 20),
-                            Row(
-                              children: [
                                 btnFeature(
                                     'icons/Matemathic.svg', 'Ujian', 'ujian'),
-                                SizedBox(width: 20),
-                                btnFeature('icons/Schedule.svg', 'Kegiatan',
-                                    'kegiatan'),
                               ],
                             ),
                             SizedBox(height: 20),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                btnFeature('icons/Schedule.svg', 'Kegiatan',
+                                    'kegiatan'),
                                 btnFeature(
                                     'icons/Webinar.svg',
                                     'Laporan Belajar Siswa',
                                     'laporan_belajar_siswa'),
-                                SizedBox(width: 20),
                                 btnFeature(
                                     'icons/E-Learning.svg',
                                     'Laporan Kinerja Guru',
@@ -63,7 +112,8 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),
                           ],
-                        ))
+                        )),
+                    pengumumanSection(context)
                   ],
                 ),
               ),
@@ -133,33 +183,56 @@ class HomeScreen extends StatelessWidget {
 
   Widget btnFeature(String icon, String nameFeature, String route) {
     return Expanded(
-        flex: 1,
-        child: SizedBox(
-          height: 150,
+        child: Column(
+      children: [
+        SizedBox(
           child: ElevatedButton(
             onPressed: () => Get.toNamed('/$route'),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 15),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SvgPicture.asset(icon),
-                  SizedBox(height: 10),
-                  Text(
-                    nameFeature,
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: SvgPicture.asset(
+                icon,
+                width: 30,
               ),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xff3B82F6),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(9)),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
             ),
           ),
-        ));
+        ),
+        SizedBox(height: 5),
+        Text(
+          nameFeature,
+          style: TextStyle(color: Color(0xff858597)),
+          textAlign: TextAlign.center,
+        ),
+      ],
+    ));
+  }
+
+  Widget pengumumanSection(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'PENGUMUMAN TERKINI',
+              style: TextStyle(
+                color: Color(0xff1F1F39),
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          
+        ],
+      ),
+    );
   }
 }

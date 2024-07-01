@@ -70,7 +70,7 @@ class OTPScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color(0xff3B82F6),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
@@ -126,7 +126,7 @@ class OTPScreen extends StatelessWidget {
             textAlign: TextAlign.center,
             maxLength: 1,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 22,
             ),
           )),
     );
