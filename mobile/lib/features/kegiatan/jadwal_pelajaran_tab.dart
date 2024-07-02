@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class JadwalPelajaranTab extends StatelessWidget {
   @override
@@ -8,7 +7,7 @@ class JadwalPelajaranTab extends StatelessWidget {
         body: SingleChildScrollView(
       padding: EdgeInsets.all(20),
       child: Column(
-        children: [JadwalSection()],
+        children: [JadwalSection(), JadwalSection(), JadwalSection()],
       ),
     ));
   }
@@ -19,7 +18,9 @@ class JadwalPelajaranTab extends StatelessWidget {
       children: [
         Text('Senin',
             style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blue)),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color(0xff3D5CFF))),
         SizedBox(height: 10),
         Card(
           shape: RoundedRectangleBorder(
@@ -49,39 +50,37 @@ class JadwalPelajaranTab extends StatelessWidget {
   }
 
   Widget PelajaranSection() {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          flex: 2,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
+        Row(
+          children: [
+            Expanded(
+              child: Text(
                 'NAMA PELAJARAN',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
-              Text(
-                'Nama Guru',
-                style: TextStyle(
-                  fontSize: 11,
-                  color: Color(0xff393939),
-                ),
-                maxLines: 2,
-                overflow: TextOverflow.clip,
-              ),
-            ],
-          ),
-        ),
-        SizedBox(width: 20),
-        Expanded(
-            flex: 1,
-            child: Text(
-              'jam pelajaran',
+            ),
+            Expanded(
+                child: Text(
+              'Jam 10:20 - 12:00',
               style: TextStyle(fontSize: 12),
+              textAlign: TextAlign.end,
             ))
+          ],
+        ),
+        Text(
+          'Nama Guru',
+          style: TextStyle(
+            fontSize: 11,
+            color: Color(0xff393939),
+          ),
+          maxLines: 2,
+          overflow: TextOverflow.clip,
+        ),
       ],
     );
   }

@@ -41,17 +41,17 @@ class PengumumanScreen extends StatelessWidget {
     String formattedReminderDate =
         DateFormat('HH:mm, dd MMM yyyy').format(reminderDate);
 
-    return Card(
-        elevation: 6,
-        shadowColor: Color.fromARGB(100, 0, 0, 0),
-        margin: EdgeInsets.only(bottom: 20),
-        child: GestureDetector(
-          onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
-            'thumbnail': thumbnail,
-            'title': title,
-            'content': content,
-            'reminderDate': reminderDate
-          }),
+    return GestureDetector(
+        onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
+              'thumbnail': thumbnail,
+              'title': title,
+              'content': content,
+              'reminderDate': reminderDate
+            }),
+        child: Card(
+          elevation: 6,
+          shadowColor: Color.fromARGB(100, 0, 0, 0),
+          margin: EdgeInsets.only(bottom: 20),
           child: SizedBox(
               height: 135,
               child: Padding(

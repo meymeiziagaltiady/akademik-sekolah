@@ -1,0 +1,1 @@
+ D:\\0KP\\akademik-mobile\\mobile\\.dart_tool\\flutter_build\\f83ecba31568a662c87442c13292c4b3\\native_assets.yaml: 

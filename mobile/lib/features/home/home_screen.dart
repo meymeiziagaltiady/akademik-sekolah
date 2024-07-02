@@ -10,61 +10,6 @@ class HomeScreen extends StatelessWidget {
   String sekolah = "SMA Hybe";
   String userRole = "Siswa";
 
-  final List<String> content = const [
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf jlfkadjflkadjflkadjfldajflkadjflkajflkadjflkadjfladkjfalkjfklajfkladjlkfajdlkfajdlkfjlkdjflkajflkdajflkajflkajsflkajdflkj END',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf ',
-    'dfakfjaldfjd alfjalkdfjaldkfjadf lkajdf kladfj adlkfdj alkfja lfkjadfadjf '
-  ];
-  final int maxLength = 650;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -215,12 +160,12 @@ class HomeScreen extends StatelessWidget {
 
   Widget pengumumanSection(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Align(
+          Container(
             alignment: Alignment.centerLeft,
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               'PENGUMUMAN TERKINI',
               style: TextStyle(
@@ -230,9 +175,42 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          
+          SizedBox(height: 10),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(width: 20),
+                _buildThumbnailPengumumanCard(context),
+                _buildThumbnailPengumumanCard(context),
+                _buildThumbnailPengumumanCard(context),
+                _buildThumbnailPengumumanCard(context),
+              ],
+            ),
+          ),
         ],
       ),
     );
+  }
+
+  Widget _buildThumbnailPengumumanCard(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
+              'thumbnail': 'images/lepi.jpg',
+              'title': 'title',
+              'content': 'Dolor nostrud deserunt dolore labore velit. Proident dolore dolor irure occaecat. Fugiat ipsum exercitation consequat excepteur aute id. Voluptate est pariatur pariatur minim adipisicing quis consectetur ex qui dolore ad. In ut est nulla ullamco mollit aute cillum do magna minim ut deserunt ipsum.\nOccaecat sint deserunt nisi et eiusmod eiusmod eu consectetur ipsum reprehenderit voluptate. Aliqua ipsum reprehenderit ullamco est excepteur. Id ea incididunt minim sint laborum nisi in excepteur ea ex ipsum. Sint culpa veniam quis esse ex. Id adipisicing ullamco occaecat ullamco consequat esse. Laboris nostrud quis labore cillum consectetur exercitation. Ex amet excepteur laborum eiusmod fugiat ipsum ut enim laborum.',
+              'reminderDate': DateTime.now()
+            }),
+        child: Container(
+      width: MediaQuery.of(context).size.width * 0.8,
+      margin: EdgeInsets.only(right: 20),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Image.network(
+          'https://firehouseshelter.com/wp-content/themes/kronos/assets/images/news-placeholder.jpg',
+          fit: BoxFit.cover,
+        ),
+      ),
+    ));
   }
 }
