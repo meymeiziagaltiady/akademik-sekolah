@@ -24,4 +24,3 @@ com.example.akademik_1.app-merged_res-22 D:\0KP\akademik-mobile\mobile\build\app
 com.example.akademik_1.app-packaged_res-23 D:\0KP\akademik-mobile\mobile\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
 com.example.akademik_1.app-packaged_res-24 D:\0KP\akademik-mobile\mobile\build\image_picker_android\intermediates\packaged_res\debug
 com.example.akademik_1.app-packaged_res-25 D:\0KP\akademik-mobile\mobile\build\path_provider_android\intermediates\packaged_res\debug
-com.example.akademik_1.app-packaged_res-26 D:\0KP\akademik-mobile\mobile\build\permission_handler_android\intermediates\packaged_res\debug

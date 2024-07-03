@@ -63,7 +63,6 @@ class KehadiranScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-
             // SHOW CURRENT LOCATION
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -71,7 +70,9 @@ class KehadiranScreen extends StatelessWidget {
                 Icon(Icons.place, color: Colors.red),
                 Text("Lokasi Saat Ini:",
                     style: TextStyle(
-                        color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 12)),
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12)),
                 SizedBox(width: 5),
                 Container(
                   constraints: BoxConstraints(maxWidth: 200),
@@ -80,12 +81,13 @@ class KehadiranScreen extends StatelessWidget {
                           'Jl. Cipamokolan No.143, Cipamokolan, Rancasari',
                           style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold, fontSize: 12)),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12)),
                       direction: Axis.horizontal),
                 )
               ],
             ),
-            
+
             Spacer(),
             Card(
               elevation: 6,

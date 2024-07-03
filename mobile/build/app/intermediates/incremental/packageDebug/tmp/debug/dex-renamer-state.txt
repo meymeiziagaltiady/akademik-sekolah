@@ -1,4 +1,4 @@
-#Tue Jul 02 15:41:24 WIB 2024
+#Wed Jul 03 11:51:23 WIB 2024
 base.0=D\:\\0KP\\akademik-mobile\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\0KP\\akademik-mobile\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=D\:\\0KP\\akademik-mobile\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

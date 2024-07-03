@@ -1,9 +1,12 @@
+import 'package:akademik_1/core/helpers/image_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class KehadiranController extends GetxController {
   var selectedReason = 'Pilih Status Kehadiran'.obs;
+  final ImagePickerController imagePickerController =
+      Get.put(ImagePickerController());
 
   void outsideSchool() {
     Get.dialog(
@@ -63,11 +66,17 @@ class KehadiranController extends GetxController {
                           child: DropdownButtonHideUnderline(
                             child: DropdownButton<String>(
                               value: selectedReason.value,
-                              items:
-                                  <String>['Pilih Status Kehadiran','Sakit', 'Izin'].map((String value) {
+                              items: <String>[
+                                'Pilih Status Kehadiran',
+                                'Sakit',
+                                'Izin'
+                              ].map((String value) {
                                 return DropdownMenuItem<String>(
                                   value: value,
-                                  child: Text(value, style: TextStyle(color: Color(0xff666666), fontSize: 12)),
+                                  child: Text(value,
+                                      style: TextStyle(
+                                          color: Color(0xff666666),
+                                          fontSize: 12)),
                                 );
                               }).toList(),
                               onChanged: (newValue) {
@@ -111,7 +120,14 @@ class KehadiranController extends GetxController {
     );
   }
 
-  void insideSchool() {
+  void insideSchool() async {
+    final imagePicked = await imagePickerController.getImageFromCamera();
+    if (imagePicked != null) {
+      succesDialog();
+    }
+  }
+
+  void succesDialog() {
     Get.dialog(
       Column(
         mainAxisAlignment: MainAxisAlignment.center,

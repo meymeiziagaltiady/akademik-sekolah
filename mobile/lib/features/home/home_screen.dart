@@ -167,7 +167,7 @@ class HomeScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             margin: EdgeInsets.only(left: 20),
             child: Text(
-              'PENGUMUMAN TERKINI',
+              'Pengumuman Terkini',
               style: TextStyle(
                 color: Color(0xff1F1F39),
                 fontWeight: FontWeight.bold,
@@ -175,7 +175,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -195,22 +195,55 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildThumbnailPengumumanCard(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
+        onTap: () => Get.toNamed('/detail_pengumuman', arguments: {
               'thumbnail': 'images/lepi.jpg',
               'title': 'title',
-              'content': 'Dolor nostrud deserunt dolore labore velit. Proident dolore dolor irure occaecat. Fugiat ipsum exercitation consequat excepteur aute id. Voluptate est pariatur pariatur minim adipisicing quis consectetur ex qui dolore ad. In ut est nulla ullamco mollit aute cillum do magna minim ut deserunt ipsum.\nOccaecat sint deserunt nisi et eiusmod eiusmod eu consectetur ipsum reprehenderit voluptate. Aliqua ipsum reprehenderit ullamco est excepteur. Id ea incididunt minim sint laborum nisi in excepteur ea ex ipsum. Sint culpa veniam quis esse ex. Id adipisicing ullamco occaecat ullamco consequat esse. Laboris nostrud quis labore cillum consectetur exercitation. Ex amet excepteur laborum eiusmod fugiat ipsum ut enim laborum.',
+              'content':
+                  'Dolor nostrud deserunt dolore labore velit. Proident dolore dolor irure occaecat. Fugiat ipsum exercitation consequat excepteur aute id. Voluptate est pariatur pariatur minim adipisicing quis consectetur ex qui dolore ad. In ut est nulla ullamco mollit aute cillum do magna minim ut deserunt ipsum.\nOccaecat sint deserunt nisi et eiusmod eiusmod eu consectetur ipsum reprehenderit voluptate. Aliqua ipsum reprehenderit ullamco est excepteur. Id ea incididunt minim sint laborum nisi in excepteur ea ex ipsum. Sint culpa veniam quis esse ex. Id adipisicing ullamco occaecat ullamco consequat esse. Laboris nostrud quis labore cillum consectetur exercitation. Ex amet excepteur laborum eiusmod fugiat ipsum ut enim laborum.',
               'reminderDate': DateTime.now()
             }),
         child: Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      margin: EdgeInsets.only(right: 20),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(10),
-        child: Image.network(
-          'https://firehouseshelter.com/wp-content/themes/kronos/assets/images/news-placeholder.jpg',
-          fit: BoxFit.cover,
-        ),
-      ),
-    ));
+          width: MediaQuery.of(context).size.width * 0.7,
+          margin: EdgeInsets.only(right: 20),
+          padding: EdgeInsets.only(bottom: 10),
+          child: Card(
+            elevation: 6,
+            shadowColor: Color.fromARGB(100, 0, 0, 0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(9.0),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(9.0),
+              child: Column(
+                children: [
+                  Image.network(
+                    'https://firehouseshelter.com/wp-content/themes/kronos/assets/images/news-placeholder.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text('Title',
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Reminder Date',
+                          style:
+                              TextStyle(fontSize: 10, color: Color(0xff858597)),
+                          textAlign: TextAlign.end,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
   }
 }

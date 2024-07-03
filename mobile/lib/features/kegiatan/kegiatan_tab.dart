@@ -1,4 +1,4 @@
-import 'package:akademik_1/features/kegiatan/controller/calendar_controller.dart';
+import 'package:akademik_1/core/helpers/calendar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -164,7 +164,7 @@ class KegiatanTab extends StatelessWidget {
 
   Widget _buildEventCard(String title, String date) {
     return GestureDetector(
-      onTap: () => Get.toNamed('/test_camera'),
+      onTap: () => Get.toNamed('/detail_kegiatan'),
       child: Card(
         elevation: 0,
         color: Color(0xff3D5CFF),

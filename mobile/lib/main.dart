@@ -3,6 +3,7 @@ import 'package:akademik_1/features/auth/login_screen.dart';
 import 'package:akademik_1/features/auth/otp_screen.dart';
 import 'package:akademik_1/features/kegiatan/detail_kegiatan_screen.dart';
 import 'package:akademik_1/features/kegiatan/kegiatan_screen.dart';
+import 'package:akademik_1/features/kegiatan/test_upload_img.dart';
 import 'package:akademik_1/features/kehadiran/kehadiran_screen.dart';
 import 'package:akademik_1/features/pengumuman/detail_pengumuman.dart';
 import 'package:akademik_1/features/pengumuman/pengumuman_screen.dart';
@@ -47,6 +48,7 @@ class Main extends StatelessWidget {
         GetPage(name: '/kehadiran', page: () => KehadiranScreen()),
         GetPage(name: '/kegiatan', page: () => KegiatanScreen()),
         GetPage(name: '/detail_kegiatan', page: () => DetailKegiatanScreen()),
+        GetPage(name: '/test', page: () => TestUploadImg()),
       ],
     );
   }
