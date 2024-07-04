@@ -52,6 +52,12 @@ class PengumumanScreen extends StatelessWidget {
           elevation: 6,
           shadowColor: Color.fromARGB(100, 0, 0, 0),
           margin: EdgeInsets.only(bottom: 20),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: BorderSide(
+              color: Color.fromARGB(25, 133, 133, 151),
+            ),
+          ),
           child: SizedBox(
               height: 135,
               child: Padding(

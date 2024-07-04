@@ -1,10 +1,13 @@
-import 'package:akademik_1/core/helpers/image_controller.dart';
+import 'dart:io';
+
+import 'package:akademik_1/core/helpers/file_picker_controller.dart';
+import 'package:akademik_1/core/widgets/components/dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class DetailKegiatanScreen extends StatelessWidget {
-  final ImagePickerController imagePickerController =
-      Get.put(ImagePickerController());
+  final FilePickerController filePickerController = Get.put(FilePickerController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,216 +29,57 @@ class DetailKegiatanScreen extends StatelessWidget {
                   'Ini deskripsi Excepteur adipisicing ipsum et sint sit adipisicing ex dolore. Deserunt ex aliquip minim nulla sunt. Id ex elit minim qui irure proident amet irure consectetur eiusmod ipsum est. Incididunt proident irure elit nostrud qui aute deserunt eiusmod enim id incididunt cillum.',
                   style: TextStyle(fontSize: 14)),
               SizedBox(height: 40),
-              Obx(() {
-                if (imagePickerController.image.value != null) {
-                  return _uploadImage();
-                } else {
-                  return _importImage(context);
-                }
-              })
+              _uploadFile()
             ])));
   }
 
-  Widget _importImage(BuildContext context) {
-    return Column(children: [
-      SizedBox(
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height / 4,
-        child: ElevatedButton(
-          onPressed: () async {
-            await imagePickerController.getImageFromGallery();
-          },
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.photo_rounded,
-                color: Color(0xff9E9E9E),
-                size: 28,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Pilih File',
-                style: TextStyle(color: Color(0xff9E9E9E), fontSize: 16),
-              ),
-            ],
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xffFAFAFA),
-            elevation: 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(12),
-              ),
-              side: BorderSide(
-                color: Color(0xff3B82F6),
-                width: 2,
-              ),
-            ),
-          ),
-        ),
-      ),
-      SizedBox(
-        height: 20,
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Divider(
-              color: Colors.grey,
-              height: 1.5,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Text(
-              'atau',
-              style: TextStyle(color: Color(0xff616161), fontSize: 18),
-            ),
-          ),
-          Expanded(
-            child: Divider(
-              color: Colors.grey,
-              height: 1.5,
-            ),
-          ),
-        ],
-      ),
-      SizedBox(
-        height: 20,
-      ),
-      SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-          onPressed: () async {
-            await imagePickerController.getImageFromCamera();
-          },
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.camera_alt,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Text(
-                'Ambil Foto',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xff3B82F6),
-            padding: EdgeInsets.symmetric(vertical: 15),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(12)),
-            ),
-          ),
-        ),
-      ),
-    ]);
-  }
-
-  Widget _uploadImage() {
+  Widget _uploadFile() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Upload Foto atau Video',
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          'Upload Foto, Video, atau dokumen PDF',
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 10),
-        Card(
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: BorderSide(color: Color(0xffE4E9F0)),
-          ),
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Stack(
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.file(
-                        imagePickerController.image.value!,
-                        width: 60,
-                        height: 60,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: FractionallySizedBox(
-                          widthFactor: 0.9,
-                          alignment: Alignment.centerLeft,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                imagePickerController.imageName.value,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Color(0xff132A60),
-                                ),
-                                overflow: TextOverflow.clip,
-                                maxLines: 2,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                '${(imagePickerController.imageSize.value / 1024).toStringAsFixed(2)} KB',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Positioned(
-                  top: 6,
-                  right: 6,
-                  child: GestureDetector(
-                    onTap: () {
-                      imagePickerController.image.value = null;
-                      imagePickerController.imageName.value = '';
-                      imagePickerController.imageSize.value = 0;
-                    },
-                    child: Icon(
-                      Icons.close,
-                      color: Colors.black,
-                      size: 16,
-                    ),
+        SizedBox(height: 15,),
+        SizedBox(
+          width: double.infinity,
+          child: DottedBorder(
+            color: Color(0xff3B82F6),
+            borderType: BorderType.RRect,
+            radius: Radius.circular(12),
+            dashPattern: [6, 3],
+            child: SizedBox(
+              width: double.infinity,
+              height: 70,
+              child: TextButton(
+                onPressed: () async {
+                  await filePickerController.getFile();
+                },
+                child: Text(
+                  '+ Tambah File',
+                  style: TextStyle(
+                    color: Color(0xff3B82F6),
                   ),
                 ),
-              ],
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                ),
+              ),
             ),
           ),
         ),
-        SizedBox(
-          height: 10,
-        ),
+        SizedBox(height: 15),
+        _buildUploadedFilesList(),
+        SizedBox(height: 30),
         SizedBox(
           width: double.infinity,
-          child: ElevatedButton(
+          child: TextButton(
             onPressed: () async {
-              Get.snackbar('UPLOAD FILE BERHASIL', 'yeyyy');
+              DialogController().succesDialog('Berhasil', Text('File berhasil diupload'));
             },
             child: Text(
               'Upload',
@@ -243,7 +87,7 @@ class DetailKegiatanScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            style: ElevatedButton.styleFrom(
+            style: TextButton.styleFrom(
               backgroundColor: Color(0xff3B82F6),
               padding: EdgeInsets.symmetric(vertical: 15),
               shape: RoundedRectangleBorder(
@@ -253,6 +97,104 @@ class DetailKegiatanScreen extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildUploadedFilesList() {
+    return Obx(() {
+      List<Widget> fileCards = [];
+      fileCards.addAll(filePickerController.images.map((file) => _buildUploadedFileCard(file)));
+      fileCards.addAll(filePickerController.videos.map((file) => _buildUploadedFileCard(file)));
+      fileCards.addAll(filePickerController.pdfs.map((file) => _buildUploadedFileCard(file)));
+
+      return Column(
+        children: fileCards,
+      );
+    });
+  }
+
+  Widget _buildUploadedFileCard(File file) {
+    String fileType = '';
+    if (file.path.endsWith('.jpg') || file.path.endsWith('.jpeg') || file.path.endsWith('.png')) {
+      fileType = 'Image';
+    } else if (file.path.endsWith('.mp4')) {
+      fileType = 'Video';
+    } else if (file.path.endsWith('.pdf')) {
+      fileType = 'PDF';
+    }
+
+    return Card(
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: Color(0xffE4E9F0)),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Stack(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: fileType == 'Image'
+                      ? Image.file(
+                          file,
+                          width: 60,
+                          height: 60,
+                          fit: BoxFit.cover,
+                        )
+                      : fileType == 'Video'
+                          ? Icon(Icons.videocam, size: 60)
+                          : Icon(Icons.picture_as_pdf, size: 60),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          file.path.split('/').last,
+                          style: TextStyle(fontSize: 12, color: Color(0xff132A60)),
+                          overflow: TextOverflow.clip,
+                          maxLines: 2,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          '${(file.lengthSync() / 1024).toStringAsFixed(2)} KB',
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Positioned(
+              top: 6,
+              right: 6,
+              child: GestureDetector(
+                onTap: () {
+                  if (fileType == 'Image') {
+                    filePickerController.images.remove(file);
+                  } else if (fileType == 'Video') {
+                    filePickerController.videos.remove(file);
+                  } else if (fileType == 'PDF') {
+                    filePickerController.pdfs.remove(file);
+                  }
+                },
+                child: Icon(
+                  Icons.close,
+                  color: Colors.black,
+                  size: 16,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

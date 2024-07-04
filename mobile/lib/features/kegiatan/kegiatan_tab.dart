@@ -23,6 +23,7 @@ class KegiatanTab extends StatelessWidget {
     return Obx(() => Container(
           color: Color(0xffF6F5F5),
           child: TableCalendar(
+            locale: 'id_ID',
             firstDay: DateTime.utc(2010, 10, 16),
             lastDay: DateTime.utc(2030, 3, 14),
             focusedDay: calendarController.focusedDay.value,

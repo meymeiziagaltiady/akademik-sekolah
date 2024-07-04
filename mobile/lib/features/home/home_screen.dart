@@ -49,11 +49,11 @@ class HomeScreen extends StatelessWidget {
                                 btnFeature(
                                     'icons/Webinar.svg',
                                     'Laporan Belajar Siswa',
-                                    'laporan_belajar_siswa'),
+                                    'laporan_siswa'),
                                 btnFeature(
                                     'icons/E-Learning.svg',
                                     'Laporan Kinerja Guru',
-                                    'laporan_kinerja_guru'),
+                                    'laporan_guru'),
                               ],
                             ),
                           ],
@@ -130,24 +130,21 @@ class HomeScreen extends StatelessWidget {
     return Expanded(
         child: Column(
       children: [
-        SizedBox(
-          child: ElevatedButton(
-            onPressed: () => Get.toNamed('/$route'),
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: SvgPicture.asset(
-                icon,
-                width: 30,
+        Container(
+            width: 85,
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: ElevatedButton(
+                onPressed: () => Get.toNamed('/$route'),
+                child: SvgPicture.asset(icon),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xff3B82F6),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                ),
               ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xff3B82F6),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-            ),
-          ),
-        ),
+            )),
         SizedBox(height: 5),
         Text(
           nameFeature,

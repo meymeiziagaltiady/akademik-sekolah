@@ -1,6 +1,6 @@
 import 'package:akademik_1/core/widgets/components/marquee.dart';
 import 'package:akademik_1/features/kehadiran/controller/kehadiran_controller.dart';
-import 'package:akademik_1/features/kehadiran/controller/date_controller.dart';
+import 'package:akademik_1/core/helpers/date_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -77,12 +77,12 @@ class KehadiranScreen extends StatelessWidget {
                 Container(
                   constraints: BoxConstraints(maxWidth: 200),
                   child: MarqueeWidget(
-                      child: Text(
-                          'Jl. Cipamokolan No.143, Cipamokolan, Rancasari',
+                      child: Obx(() => Text(
+                          kehadiranController.currentLocation.value,
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 12)),
+                              fontSize: 12))),
                       direction: Axis.horizontal),
                 )
               ],
@@ -132,7 +132,7 @@ class KehadiranScreen extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: ElevatedButton(
-                        onPressed: kehadiranController.insideSchool,
+                        onPressed: kehadiranController.onPresentClicked,
                         child: Text(
                           "Absen Masuk",
                           style: TextStyle(color: Colors.white, fontSize: 11),
@@ -162,6 +162,13 @@ class KehadiranScreen extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20),
       elevation: 7,
       shadowColor: Color(0xffDFDFEB),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(
+          color: Color.fromARGB(25, 133, 133, 151),
+          width: 1.0,
+        ),
+      ),
       child: ExpansionTile(
         title: Text(
           formattedPresentDate,

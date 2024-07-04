@@ -1,8 +1,17 @@
 # This is a generated file; do not edit or check into version control.
+file_picker=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_picker-8.0.6\\
 file_selector_linux=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_linux-0.9.2+1\\
 file_selector_macos=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_macos-0.9.4\\
 file_selector_windows=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_windows-0.9.3+1\\
 flutter_plugin_android_lifecycle=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\flutter_plugin_android_lifecycle-2.0.20\\
+geocoding=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geocoding-3.0.0\\
+geocoding_android=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geocoding_android-3.3.1\\
+geocoding_ios=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geocoding_ios-3.0.1\\
+geolocator=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geolocator-12.0.0\\
+geolocator_android=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geolocator_android-4.6.0\\
+geolocator_apple=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geolocator_apple-2.3.7\\
+geolocator_web=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geolocator_web-4.0.0\\
+geolocator_windows=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\geolocator_windows-0.2.3\\
 image_picker=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\image_picker-1.1.2\\
 image_picker_android=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\image_picker_android-0.8.12+3\\
 image_picker_for_web=C:\\Users\\MEY\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\image_picker_for_web-3.0.4\\

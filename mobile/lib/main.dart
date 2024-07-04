@@ -3,8 +3,10 @@ import 'package:akademik_1/features/auth/login_screen.dart';
 import 'package:akademik_1/features/auth/otp_screen.dart';
 import 'package:akademik_1/features/kegiatan/detail_kegiatan_screen.dart';
 import 'package:akademik_1/features/kegiatan/kegiatan_screen.dart';
-import 'package:akademik_1/features/kegiatan/test_upload_img.dart';
 import 'package:akademik_1/features/kehadiran/kehadiran_screen.dart';
+import 'package:akademik_1/features/laporan_siswa/detail_report_event.screen.dart';
+import 'package:akademik_1/features/laporan_siswa/detail_report_score_screen.dart';
+import 'package:akademik_1/features/laporan_siswa/laporan_siswa_screen.dart';
 import 'package:akademik_1/features/pengumuman/detail_pengumuman.dart';
 import 'package:akademik_1/features/pengumuman/pengumuman_screen.dart';
 import 'package:akademik_1/features/profile/detail_avatar.dart';
@@ -48,7 +50,9 @@ class Main extends StatelessWidget {
         GetPage(name: '/kehadiran', page: () => KehadiranScreen()),
         GetPage(name: '/kegiatan', page: () => KegiatanScreen()),
         GetPage(name: '/detail_kegiatan', page: () => DetailKegiatanScreen()),
-        GetPage(name: '/test', page: () => TestUploadImg()),
+        GetPage(name: '/laporan_siswa', page: () => LaporanSiswaScreen()),
+        GetPage(name: '/detail_report_score', page: () => DetailReportScoreScreen()),
+        GetPage(name: '/detail_report_event', page: () => DetailReportEventScreen()),
       ],
     );
   }
