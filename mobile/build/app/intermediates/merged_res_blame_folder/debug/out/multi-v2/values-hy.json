@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.akademik_1.app-mergeDebugResources-22:/values-hy/values-hy.xml",
+            "outputFile": "com.example.akademik_1.app-mergeDebugResources-24:/values-hy/values-hy.xml",
             "map": [
                 {
                     "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\a43f60338762a20514d953a92576aa3e\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-hy\\values.xml",
@@ -30,11 +30,28 @@
                         "endOffsets": "150,255,353,452,557,659,770,871"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,36",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,155,260,358,457,562,664,3090",
+                        "startOffsets": "55,155,260,358,457,562,664,3744",
                         "endColumns": "99,104,97,98,104,101,110,100",
-                        "endOffsets": "150,255,353,452,557,659,770,3186"
+                        "endOffsets": "150,255,353,452,557,659,770,3840"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\0fd5640123ed001fafb7ba7df80a0c66\\transformed\\jetified-media3-exoplayer-1.3.1\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,127,190,254,322,403,480,554,631",
+                        "endColumns": "71,62,63,67,80,76,73,76,77",
+                        "endOffsets": "122,185,249,317,398,475,549,626,704"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30,31,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3090,3162,3225,3289,3357,3438,3515,3589,3666",
+                        "endColumns": "71,62,63,67,80,76,73,76,77",
+                        "endOffsets": "3157,3220,3284,3352,3433,3510,3584,3661,3739"
                     }
                 },
                 {

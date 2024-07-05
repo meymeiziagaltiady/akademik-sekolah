@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.akademik_1.app-mergeDebugResources-22:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.example.akademik_1.app-mergeDebugResources-24:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\15088703de3bad0e3afcd46f6aaa7661\\transformed\\core-1.13.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
@@ -13,11 +13,11 @@
                         "endOffsets": "148,250,349,451,555,659,773,874"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,36",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,3193",
+                        "startOffsets": "55,153,255,354,456,560,664,3923",
                         "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,3289"
+                        "endOffsets": "148,250,349,451,555,659,773,4019"
                     }
                 },
                 {
@@ -35,6 +35,23 @@
                         "startOffsets": "778,884,1064,1194,1303,1474,1607,1728,2002,2197,2309,2494,2630,2790,2969,3042,3109",
                         "endColumns": "105,179,129,108,170,132,120,112,194,111,184,135,159,178,72,66,83",
                         "endOffsets": "879,1059,1189,1298,1469,1602,1723,1836,2192,2304,2489,2625,2785,2964,3037,3104,3188"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\0fd5640123ed001fafb7ba7df80a0c66\\transformed\\jetified-media3-exoplayer-1.3.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,129,194,272,344,427,503,600,693",
+                        "endColumns": "73,64,77,71,82,75,96,92,91",
+                        "endOffsets": "124,189,267,339,422,498,595,688,780"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30,31,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3193,3267,3332,3410,3482,3565,3641,3738,3831",
+                        "endColumns": "73,64,77,71,82,75,96,92,91",
+                        "endOffsets": "3262,3327,3405,3477,3560,3636,3733,3826,3918"
                     }
                 },
                 {

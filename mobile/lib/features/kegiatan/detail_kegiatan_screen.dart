@@ -158,7 +158,7 @@ class DetailKegiatanScreen extends StatelessWidget {
                         Text(
                           file.path.split('/').last,
                           style: TextStyle(fontSize: 12, color: Color(0xff132A60)),
-                          overflow: TextOverflow.clip,
+                          overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                         ),
                         SizedBox(height: 8),

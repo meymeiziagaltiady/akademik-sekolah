@@ -1,9 +1,11 @@
+import 'package:akademik_1/core/widgets/components/detail_file_attachment.dart';
 import 'package:akademik_1/features/home/home_screen.dart';
 import 'package:akademik_1/features/auth/login_screen.dart';
 import 'package:akademik_1/features/auth/otp_screen.dart';
 import 'package:akademik_1/features/kegiatan/detail_kegiatan_screen.dart';
 import 'package:akademik_1/features/kegiatan/kegiatan_screen.dart';
 import 'package:akademik_1/features/kehadiran/kehadiran_screen.dart';
+import 'package:akademik_1/features/laporan_guru/laporan_guru_screen.dart';
 import 'package:akademik_1/features/laporan_siswa/detail_report_event.screen.dart';
 import 'package:akademik_1/features/laporan_siswa/detail_report_score_screen.dart';
 import 'package:akademik_1/features/laporan_siswa/laporan_siswa_screen.dart';
@@ -15,9 +17,10 @@ import 'package:akademik_1/features/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(Main());
+  initializeDateFormatting().then((_) =>runApp(Main()));
 }
 
 class Main extends StatelessWidget {
@@ -53,6 +56,8 @@ class Main extends StatelessWidget {
         GetPage(name: '/laporan_siswa', page: () => LaporanSiswaScreen()),
         GetPage(name: '/detail_report_score', page: () => DetailReportScoreScreen()),
         GetPage(name: '/detail_report_event', page: () => DetailReportEventScreen()),
+        GetPage(name: '/detail_file_attachment', page: ()=> DetailFileAttachment()),
+        GetPage(name: '/laporan_guru', page: ()=> LaporanGuruScreen()),
       ],
     );
   }

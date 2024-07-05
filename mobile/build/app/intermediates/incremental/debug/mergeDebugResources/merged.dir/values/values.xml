@@ -132,6 +132,15 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="exo_download_completed">Download completed</string>
+    <string name="exo_download_description">Download</string>
+    <string name="exo_download_downloading">Downloading</string>
+    <string name="exo_download_failed">Download failed</string>
+    <string name="exo_download_notification_channel_name">Downloads</string>
+    <string name="exo_download_paused">Downloads paused</string>
+    <string name="exo_download_paused_for_network">Downloads waiting for network</string>
+    <string name="exo_download_paused_for_wifi">Downloads waiting for WiFi</string>
+    <string name="exo_download_removing">Removing downloads</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         
@@ -285,6 +294,12 @@
 
 <attr format="boolean" name="circleCrop"/>
 </declare-styleable>
+    <declare-styleable name="ScrollBar">
+        <attr format="color|reference" name="sb_handlerColor"/>
+        <attr format="color|reference" name="sb_indicatorColor"/>
+        <attr format="color|reference" name="sb_indicatorTextColor"/>
+        <attr format="boolean|reference" name="sb_horizontal"/>
+    </declare-styleable>
     <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
 <enum name="standard" value="0"/>
 

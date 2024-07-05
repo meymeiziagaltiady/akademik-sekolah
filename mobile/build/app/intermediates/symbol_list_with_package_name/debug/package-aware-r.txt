@@ -27,6 +27,10 @@ attr nestedScrollViewStyle
 attr placeholderActivityName
 attr primaryActivityName
 attr queryPatterns
+attr sb_handlerColor
+attr sb_horizontal
+attr sb_indicatorColor
+attr sb_indicatorTextColor
 attr scopeUris
 attr secondaryActivityAction
 attr secondaryActivityName
@@ -94,6 +98,10 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable default_scroll_handle_bottom
+drawable default_scroll_handle_left
+drawable default_scroll_handle_right
+drawable default_scroll_handle_top
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_call_answer
@@ -246,6 +254,15 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string exo_download_completed
+string exo_download_description
+string exo_download_downloading
+string exo_download_failed
+string exo_download_notification_channel_name
+string exo_download_paused
+string exo_download_paused_for_network
+string exo_download_paused_for_wifi
+string exo_download_removing
 string status_bar_notification_info_overflow
 style LaunchTheme
 style NormalTheme
@@ -265,6 +282,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable ScrollBar sb_handlerColor sb_horizontal sb_indicatorColor sb_indicatorTextColor
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable SplitPairFilter primaryActivityName secondaryActivityAction secondaryActivityName
 styleable SplitPairRule clearTop finishPrimaryWithSecondary finishSecondaryWithPrimary splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio

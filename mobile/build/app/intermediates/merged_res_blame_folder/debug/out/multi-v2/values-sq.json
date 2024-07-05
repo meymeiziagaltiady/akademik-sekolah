@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.akademik_1.app-mergeDebugResources-22:/values-sq/values-sq.xml",
+            "outputFile": "com.example.akademik_1.app-mergeDebugResources-24:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\a43f60338762a20514d953a92576aa3e\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-sq\\values.xml",
@@ -30,11 +30,28 @@
                         "endOffsets": "149,251,349,446,554,665,787,888"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,36",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,354,451,559,670,3133",
+                        "startOffsets": "55,154,256,354,451,559,670,3803",
                         "endColumns": "98,101,97,96,107,110,121,100",
-                        "endOffsets": "149,251,349,446,554,665,787,3229"
+                        "endOffsets": "149,251,349,446,554,665,787,3899"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MEY\\.gradle\\caches\\transforms-3\\0fd5640123ed001fafb7ba7df80a0c66\\transformed\\jetified-media3-exoplayer-1.3.1\\res\\values-sq\\values-sq.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,126,187,254,320,398,477,569,655",
+                        "endColumns": "70,60,66,65,77,78,91,85,69",
+                        "endOffsets": "121,182,249,315,393,472,564,650,720"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30,31,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3133,3204,3265,3332,3398,3476,3555,3647,3733",
+                        "endColumns": "70,60,66,65,77,78,91,85,69",
+                        "endOffsets": "3199,3260,3327,3393,3471,3550,3642,3728,3798"
                     }
                 },
                 {
